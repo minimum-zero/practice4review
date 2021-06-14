@@ -1,0 +1,90 @@
+@font-face {
+  font-family: 'Cafe24SsurroundAir';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Cafe24SsurroundAir';
+  font-size: 18px;
+  transition-duration: .3s;
+}
+header{
+  width: 100%;
+  background-color: rgb(139, 179, 84);
+}
+.inner{
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.inner > a{
+  margin: 10px;
+}
+.menu{
+  width: 70%;
+  max-width: 500px;
+}
+.menu > ul{
+  display: flex;
+  justify-content: space-between;
+}
+.menu > ul > li:hover > a{
+  color:rgb(88, 120, 49);
+  font-weight: 700;
+}
+.toggle{
+  position: absolute;
+  right: 20px; top: 20px;
+  font-size: 30px;
+  display: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px){
+.toggle{
+  display: block;
+}
+.inner{
+  flex-direction: column;
+  width: 100%;
+}
+.menu{
+  width: 100%;
+  max-width: none;
+  display: none;
+}
+.menu > ul{
+  flex-direction: column;
+  align-items: center;
+}
+.menu > ul > li{
+  text-align: center;
+  display: table;
+  height: 50px;
+  width: 100%;
+}
+.menu > ul > li:hover{
+  background-color: rgb(88, 120, 49);
+}
+.menu > ul > li > a{
+  display: table-cell;
+  vertical-align: middle;
+}
+.menu > ul > li:hover > a{
+  color: #fff;
+  font-weight: 500;
+}
+}
+/* 스트립트용 */
+.menu.opened{
+  display: block;
+}
