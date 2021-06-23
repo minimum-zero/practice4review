@@ -1,0 +1,37 @@
+*{
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  transition: 1s ease-in;
+}
+.container{
+  width: 100%;
+  position: relative;
+}
+.slider{
+  position: relative;
+}
+.slides{
+  width: 100%;
+  height: 500px;
+  display: table;
+  position: absolute;
+  opacity: 0;
+}
+.slides a{
+  display: table-cell;
+  vertical-align: middle;
+}
+.slides:nth-child(1){
+  background-color: rgb(255, 128, 82);
+}
+.slides:nth-child(2){
+  background-color: rgb(255, 228, 72);
+}
+.slides:nth-child(3){
+  background-color: rgb(151, 213, 107);
+}
+.showup{
+  z-index: 1;
+  opacity: 1;
+}
